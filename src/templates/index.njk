@@ -1,0 +1,158 @@
+{# Home Page Template - Extends base layout #}
+{% extends "base.njk" %}
+
+{% set activePage = 'home' %}
+
+{% block title %}Home | Bootstrap UI Exploration{% endblock %}
+
+{% block metaDescription %}Task 1 - Bootstrap 5 UI Exploration - Professional Business Website{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Welcome to TechSolutions</h1>
+                    <p class="lead">Building innovative digital experiences with cutting-edge technology and creative design.</p>
+                    <a href="about.html" class="btn btn-light btn-lg me-2">Learn More</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">Get Started</a>
+                </div>
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <i class="bi bi-code-slash" style="font-size: 200px; opacity: 0.8;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h4>Fast Performance</h4>
+                        <p class="text-muted">Lightning-fast load times and optimal performance for the best user experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h4>Responsive Design</h4>
+                        <p class="text-muted">Perfectly optimized for all devices - mobile, tablet, and desktop.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Secure & Reliable</h4>
+                        <p class="text-muted">Enterprise-grade security with 99.9% uptime guarantee.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Cards Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-globe" style="font-size: 3rem; color: #667eea;"></i>
+                            </div>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Custom web applications built with modern technologies and best practices.</p>
+                            <a href="about.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-phone" style="font-size: 3rem; color: #667eea;"></i>
+                            </div>
+                            <h5 class="card-title">Mobile Apps</h5>
+                            <p class="card-text">Native and cross-platform mobile applications for iOS and Android.</p>
+                            <a href="about.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-cloud" style="font-size: 3rem; color: #667eea;"></i>
+                            </div>
+                            <h5 class="card-title">Cloud Solutions</h5>
+                            <p class="card-text">Scalable cloud infrastructure and deployment services for your applications.</p>
+                            <a href="about.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Clients Say</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"TechSolutions delivered an outstanding website that exceeded our expectations. Professional, timely, and excellent communication throughout."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: white;">
+                                    <span>JD</span>
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0">John Doe</h6>
+                                    <small class="text-muted">CEO, StartupXYZ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Amazing work! The team understood our requirements perfectly and delivered a responsive, modern website that our customers love."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; color: white;">
+                                    <span>JS</span>
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0">Jane Smith</h6>
+                                    <small class="text-muted">Marketing Director, TechCorp</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-4">Let's build something amazing together</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Contact Us Today</a>
+        </div>
+    </section>
+{% endblock %}

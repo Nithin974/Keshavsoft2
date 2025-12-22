@@ -1,0 +1,221 @@
+{# Contact Page Template - Extends base layout #}
+{% extends "base.njk" %}
+
+{% set activePage = 'contact' %}
+
+{% block title %}Contact | Bootstrap UI Exploration{% endblock %}
+
+{% block metaDescription %}Contact TechSolutions - Professional Business Website{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>Contact Us</h1>
+            <p class="lead">Get in touch with our team</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <!-- Contact Info Cards -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Our Location</h5>
+                        <p class="text-muted">
+                            123 Business Street<br>
+                            Tech City, TC 12345<br>
+                            United States
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Call Us</h5>
+                        <p class="text-muted">
+                            Main: +1 (555) 123-4567<br>
+                            Support: +1 (555) 765-4321<br>
+                            Mon-Fri 9:00 AM - 6:00 PM
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Email Us</h5>
+                        <p class="text-muted">
+                            info@mybrand.com<br>
+                            support@mybrand.com<br>
+                            We reply within 24 hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h3 class="text-center mb-4 fw-bold">Send Us a Message</h3>
+                        <p class="text-center text-muted mb-4">
+                            Fill out the form below and we'll get back to you as soon as possible.
+                        </p>
+                        
+                        <!-- Success Alert (Hidden by default) -->
+                        <div class="alert alert-success success-message" role="alert" style="display: none;">
+                            <i class="bi bi-check-circle-fill"></i> 
+                            <strong>Success!</strong> Your message has been sent successfully. We'll get back to you soon!
+                        </div>
+                        
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <!-- Name Field -->
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">
+                                        <i class="bi bi-person"></i> Full Name *
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="name" 
+                                           placeholder="John Doe"
+                                           required>
+                                    <div class="invalid-feedback">
+                                        Please provide your name.
+                                    </div>
+                                </div>
+                                
+                                <!-- Email Field -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">
+                                        <i class="bi bi-envelope"></i> Email Address *
+                                    </label>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           placeholder="john@example.com"
+                                           required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                                
+                                <!-- Subject Field -->
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">
+                                        <i class="bi bi-chat-left-text"></i> Subject *
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="subject" 
+                                           placeholder="How can we help you?"
+                                           required>
+                                    <div class="invalid-feedback">
+                                        Please provide a subject.
+                                    </div>
+                                </div>
+                                
+                                <!-- Message Field -->
+                                <div class="col-12">
+                                    <label for="message" class="form-label">
+                                        <i class="bi bi-pencil-square"></i> Message *
+                                    </label>
+                                    <textarea class="form-control" 
+                                              id="message" 
+                                              rows="6" 
+                                              placeholder="Tell us more about your inquiry..."
+                                              required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please provide a message.
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                                        <i class="bi bi-send-fill"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-container mt-5">
+                <h4 class="text-center fw-bold mb-4">Find Us Here</h4>
+                <div class="map-placeholder" style="background: white; padding: 100px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                    <div>
+                        <i class="bi bi-map fs-1 d-block mb-2" style="color: #667eea;"></i>
+                        <p class="text-muted">Map Location (Embed Google Maps here)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center py-5">
+                    <div class="mb-4">
+                        <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Message Sent Successfully!</h3>
+                    <p class="text-muted mb-4">
+                        Thank you for contacting us. We've received your message and will get back to you within 24 hours.
+                    </p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block additionalScripts %}
+<script>
+    // Bootstrap Form Validation
+    (function() {
+        'use strict';
+        
+        const form = document.getElementById('contactForm');
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (form.checkValidity()) {
+                // Show success modal
+                successModal.show();
+                
+                // Reset form after short delay
+                setTimeout(function() {
+                    form.reset();
+                    form.classList.remove('was-validated');
+                }, 500);
+            } else {
+                form.classList.add('was-validated');
+            }
+        }, false);
+    })();
+</script>
+{% endblock %}
